@@ -16,9 +16,9 @@ int main () {
     vector<int> total_calories;
 
     //preprocess file
-    while ( getline (input_file, line) )
+    while ( getline (input_file, line, '\n') )
     {
-        if (line.empty() || line[0] == '\n')
+        if (line.empty())
         {
             total_calories.push_back(curr_calories);
             curr_calories = 0;
