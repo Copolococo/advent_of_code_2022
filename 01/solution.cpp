@@ -6,17 +6,19 @@
 
 using namespace std;
 
-int main () {
+int main()
+{
     string line;
-    ifstream input_file ("input.txt");
+    ifstream input_file("input.txt");
 
-    if (!input_file.is_open()) return 1;
+    if (!input_file.is_open())
+        return 1;
 
     int curr_calories = 0;
     vector<int> total_calories;
 
-    //preprocess file
-    while ( getline (input_file, line, '\n') )
+    // preprocess file
+    while (getline(input_file, line, '\n'))
     {
         if (line.empty())
         {
@@ -32,7 +34,7 @@ int main () {
     input_file.close();
 
     // sort 3 highest
-    std::partial_sort (total_calories.begin(), total_calories.begin()+3, total_calories.end(), [](int a, int b) { return (a > b); });
+    partial_sort(total_calories.begin(), total_calories.begin() + 3, total_calories.end(), [](int a, int b) { return (a > b); });
 
     int sum_top_3 = total_calories[0] + total_calories[1] + total_calories[2];
 
