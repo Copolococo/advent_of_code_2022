@@ -1,6 +1,5 @@
 #include <fstream>
 #include <iostream>
-#include <string>
 #include <vector>
 #include <algorithm>
 
@@ -17,7 +16,6 @@ int main()
     int curr_calories = 0;
     vector<int> total_calories;
 
-    // preprocess file
     while (getline(input_file, line, '\n'))
     {
         if (line.empty())
@@ -33,8 +31,8 @@ int main()
 
     input_file.close();
 
-    // sort 3 highest
-    partial_sort(total_calories.begin(), total_calories.begin() + 3, total_calories.end(), [](int a, int b) { return (a > b); });
+    partial_sort(total_calories.begin(), total_calories.begin() + 3, total_calories.end(), [](int a, int b)
+                 { return (a > b); });
 
     int sum_top_3 = total_calories[0] + total_calories[1] + total_calories[2];
 
