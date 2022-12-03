@@ -1,5 +1,7 @@
 CC = g++
 
+all: solution alternate
+
 solution: solution.cpp input.txt
 	$(CC) -o solution solution.cpp
 
