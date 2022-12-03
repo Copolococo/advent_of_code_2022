@@ -7,4 +7,6 @@ alternate: alternate.cpp input.txt
 	$(CC) -o alternate alternate.cpp
 
 clean:
-	rm -f solution
+	rm -f \
+	solution \
+	alternate

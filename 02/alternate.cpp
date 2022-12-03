@@ -1,7 +1,5 @@
 #include <fstream>
 #include <iostream>
-#include <string>
-#include <map>
 
 using namespace std;
 
@@ -20,9 +18,10 @@ int main()
     {
         int left = line[0] - 'A' + 1;
         int right = line[2] - 'X' + 1;
-        score_pt1 += ((4 + (right - left)) % 3) * 3 + right;
-        score_pt2 += ((left + right) % 3) + 1 + ((right - 1) * 3);
+        score_pt1 += ((4 + right - left) % 3) * 3 + right;
+        score_pt2 += 1 + ((left + right) % 3) + ((right - 1) * 3);
     }
+
     cout << "Total Score pt1: " << score_pt1 << endl;
     cout << "Total Score pt2: " << score_pt2 << endl;
 
