@@ -4,4 +4,6 @@
 [0-2][0-9]/sample_input*
 
 ![0-2][0-9]/solution[12].cpp
+![0-2][0-9]/solution.cpp
 ![0-2][0-9]/alternate[0-9].cpp
+![0-2][0-9]/alternate.cpp
